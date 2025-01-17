@@ -14,5 +14,10 @@
        <li th:each="produto : ${produtos}" th:text="${produto.nome}"></li>
 	</ul>
     
+	<h2>Condicional </h2>
+	
+	<p th:if="${usuario != null}" th:text="'Bem-vindo, ' + ${usuario.nome}">Usuário</p>
+	<p th:unless="${usuario != null}" th:text="'Bem-vindo, visitante'">Visitante</p>
+
 </body>
 </html>

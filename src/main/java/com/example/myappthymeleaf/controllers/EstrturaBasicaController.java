@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.example.myappthymeleaf.model.Produto;
+import com.example.myappthymeleaf.model.Usuario;
 
 
 @Controller
@@ -19,7 +20,9 @@ public class EstrturaBasicaController {
     	lista.add(new Produto("Smartphone", 1000.0));
     	lista.add(new Produto("Notebook", 3000.0));
     	
+    	Usuario usuario = new Usuario("Aluno Fiap");
     	
+    	model.addAttribute("usuario", usuario);
     	model.addAttribute("produtos",lista);
     	//variável básica
     	model.addAttribute("mensagem", "Bem-vindo, aluno Fiap!");
