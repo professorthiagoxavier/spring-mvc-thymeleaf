@@ -8,6 +8,11 @@
 	        
    <div th:replace="cabecalho :: cabecalho"></div>
    <p><span th:text="${mensagem}">Texto padrão</span></p>
+   
+   <h2>Lista de produtos</h2>
+   <ul>
+       <li th:each="produto : ${produtos}" th:text="${produto.nome}"></li>
+	</ul>
     
 </body>
 </html>
