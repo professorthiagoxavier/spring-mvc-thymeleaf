@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalhes do Funcionário</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Detalhes do Funcionário</h1>
+    <p>Nome: <span th:text="${funcionario.nome}"></span></p>
+    <p>Idade: <span th:text="${funcionario.idade}"></span></p>
+    <p>Cargo: <span th:text="${funcionario.cargo}"></span></p>
+    <p>Salário: <span th:text="${funcionario.salario}"></span></p>
+</body>
+</html>
