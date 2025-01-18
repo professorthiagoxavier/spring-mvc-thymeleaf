@@ -1,0 +1,27 @@
+/* Garante que a página ocupe toda a altura disponível */
+html, body {
+    height: 100%;
+    margin: 0;
+
+}
+
+/* Garante que o conteúdo principal ocupe o espaço restante */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* O conteúdo principal da página */
+main {
+    flex-grow: 1;  /* Faz o conteúdo ocupar o máximo de espaço disponível */
+}
+
+/* O rodapé fixado na parte inferior */
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

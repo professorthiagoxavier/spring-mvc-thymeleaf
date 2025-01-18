@@ -1,14 +1,23 @@
+<!-- layoutBase.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Estrutura básica</title>
+    <title th:text="${title}">Título da Página</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 </head>
 <body>
-	        
-   <div th:replace="cabecalho :: cabecalho"></div>
-   <p><span th:text="${mensagem}">Texto padrão</span></p>
+    <div th:replace="fragments/menu :: menu"></div>
+    
+    <main class="container-fluid">
+        <!-- O conteúdo específico da página, como produto, será injetado aqui -->
    
-  
+		 <div th:replace="${bodyContent}"></div>
+    </main>
+    
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 Meu site</p>
+    </footer>
 </body>
 </html>

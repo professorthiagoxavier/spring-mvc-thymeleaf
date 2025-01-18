@@ -1,0 +1,15 @@
+<!-- produto.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${produto.nome}">Produto </title>
+</head>
+<body>
+    <div>
+		ID: <span th:text="${produto.id}" > </span>
+        <h2 th:text="${produto.nome}">Nome do Produto - </h2>
+        <p th:text="${produto.descricao}">Descrição do Produto</p>
+        <p th:text="'Preço: ' + ${produto.preco}">Preço</p>
+    </div>
+</body>
+</html>
