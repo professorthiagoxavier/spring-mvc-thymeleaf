@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+	<form th:action="@{/salvar}" th:object="${usuario}" method="post">
+	    <input type="text" th:field="*{nome}" placeholder="Nome" />
+	    <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+
+	    <input type="email" th:field="*{email}" placeholder="Email" />
+	    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+	    <button type="submit">Salvar</button>
+	</form>
+</body>
+</html>
