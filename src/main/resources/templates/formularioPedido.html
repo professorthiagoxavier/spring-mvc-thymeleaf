@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido de Produtos</title>
+</head>
+<body>
+
+<h1>Selecione os produtos</h1>
+
+<form th:action="@{/salvar-pedido}" th:object="${pedido}" method="post">
+    <div th:each="produto : ${produtos}">
+        <input type="checkbox" th:field="*{produtosSelecionados}" th:value="${produto.id}" />
+        <span th:text="${produto.nome}">Nome do Produto</span>
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+
+</body>
+</html>

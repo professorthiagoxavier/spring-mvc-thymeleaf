@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sucesso</title>
+</head>
+<body>
+
+<h1>Pedido realizado com sucesso!</h1>
+
+<h2>Produtos selecionados:</h2>
+<ul>
+    <li th:each="produto : ${produtosSelecionados}" th:text="${produto.nome}">Nome do Produto</li>
+</ul>
+
+<a href="/pedido">Voltar para o formulário</a>
+
+</body>
+</html>
