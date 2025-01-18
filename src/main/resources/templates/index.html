@@ -9,15 +9,6 @@
    <div th:replace="cabecalho :: cabecalho"></div>
    <p><span th:text="${mensagem}">Texto padrão</span></p>
    
-   <h2>Lista de produtos</h2>
-   <ul>
-       <li th:each="produto : ${produtos}" th:text="${produto.nome}"></li>
-	</ul>
-    
-	<h2>Condicional </h2>
-	
-	<p th:if="${usuario != null}" th:text="'Bem-vindo, ' + ${usuario.nome}">Usuário</p>
-	<p th:unless="${usuario != null}" th:text="'Bem-vindo, visitante'">Visitante</p>
-
+  
 </body>
 </html>
